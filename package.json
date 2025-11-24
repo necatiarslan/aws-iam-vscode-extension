@@ -1,0 +1,355 @@
+{
+  "name": "aws-iam-vscode-extension",
+  "displayName": "AWS IAM",
+  "description": "Manage & Monitor your AWS IAM Roles",
+  "version": "1.0.0",
+  "publisher": "NecatiARSLAN",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/necatiarslan/aws-iam-vscode-extension"
+  },
+  "icon": "media/aws-iam-logo-extension.png",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "AWS",
+    "IAM",
+    "Roles"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "IamTreeView.Refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "IamTreeView.Filter",
+        "title": "Filter",
+        "icon": "$(filter)"
+      },
+      {
+        "command": "IamTreeView.ShowOnlyFavorite",
+        "title": "Show Only Favorite",
+        "icon": "$(bookmark)"
+      },
+      {
+        "command": "IamTreeView.ShowHiddenNodes",
+        "title": "Show Hidden Nodes",
+        "icon": "$(eye-closed)"
+      },
+      {
+        "command": "IamTreeView.AddToFav",
+        "title": "Fav"
+      },
+      {
+        "command": "IamTreeView.DeleteFromFav",
+        "title": "UnFav"
+      },
+      {
+        "command": "IamTreeView.HideNode",
+        "title": "Hide"
+      },
+      {
+        "command": "IamTreeView.UnHideNode",
+        "title": "UnHide"
+      },
+      {
+        "command": "IamTreeView.AddIamRole",
+        "title": "Add IAM Role",
+        "icon": "$(add)"
+      },
+      {
+        "command": "IamTreeView.RemoveIamRole",
+        "title": "Remove IAM Role"
+      },
+      {
+        "command": "IamTreeView.Goto",
+        "title": "Goto Aws Console"
+      },
+      {
+        "command": "IamTreeView.SelectAwsProfile",
+        "title": "Select Aws Profile",
+        "icon": "$(account)"
+      },
+      {
+        "command": "IamTreeView.PrintIamRole",
+        "title": "Print IAM Role",
+        "icon": "$(lightbulb)"
+      },
+      {
+        "command": "IamTreeView.TestAwsConnection",
+        "title": "Test Aws Connection"
+      },
+      {
+        "command": "IamTreeView.UpdateAwsEndPoint",
+        "title": "Update Aws EndPoint"
+      },
+      {
+        "command": "IamTreeView.Donate",
+        "title": "Donate"
+      },
+      {
+        "command": "IamTreeView.BugAndNewFeature",
+        "title": "Bug and New Feature"
+      },
+      {
+        "command": "IamTreeView.LoadPermissions",
+        "title": "Load Permissions",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "IamTreeView.LoadTrustRelationships",
+        "title": "Load Trust Relationships",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "IamTreeView.LoadTags",
+        "title": "Load Tags",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "IamTreeView.LoadInfo",
+        "title": "Load Info",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "IamTreeView.AddTag",
+        "title": "Add Tag",
+        "icon": "$(add)"
+      },
+      {
+        "command": "IamTreeView.UpdateTag",
+        "title": "Update Tag",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "IamTreeView.RemoveTag",
+        "title": "Remove Tag",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "IamTreeView.ViewPolicy",
+        "title": "View Policy",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "IamTreeView.DownloadPolicy",
+        "title": "Download Policy",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "IamTreeView.ViewTrustRelationship",
+        "title": "View Trust Policy",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "IamTreeView.DownloadTrustRelationship",
+        "title": "Download Trust Policy",
+        "icon": "$(cloud-download)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "IamTreeView.ShowOnlyFavorite",
+          "when": "view == IamTreeView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "IamTreeView.ShowHiddenNodes",
+          "when": "view == IamTreeView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "IamTreeView.Filter",
+          "when": "view == IamTreeView",
+          "group": "navigation@3"
+        },
+        {
+          "command": "IamTreeView.AddIamRole",
+          "when": "view == IamTreeView",
+          "group": "navigation@4"
+        },
+        {
+          "command": "IamTreeView.SelectAwsProfile",
+          "when": "view == IamTreeView",
+          "group": "navigation@6"
+        },
+        {
+          "command": "IamTreeView.Refresh",
+          "when": "view == IamTreeView",
+          "group": "navigation@7"
+        },
+        {
+          "command": "IamTreeView.TestAwsConnection",
+          "when": "view == IamTreeView",
+          "group": "other"
+        },
+        {
+          "command": "IamTreeView.UpdateAwsEndPoint",
+          "when": "view == IamTreeView",
+          "group": "other"
+        },
+        {
+          "command": "IamTreeView.Donate",
+          "when": "view == IamTreeView",
+          "group": "other"
+        },
+        {
+          "command": "IamTreeView.BugAndNewFeature",
+          "when": "view == IamTreeView",
+          "group": "other"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "IamTreeView.AddToFav",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "Filter"
+        },
+        {
+          "command": "IamTreeView.DeleteFromFav",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "Filter"
+        },
+        {
+          "command": "IamTreeView.HideNode",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "Filter"
+        },
+        {
+          "command": "IamTreeView.UnHideNode",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "Filter"
+        },
+        {
+          "command": "IamTreeView.RemoveIamRole",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "IamRole"
+        },
+        {
+          "command": "IamTreeView.Goto",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "IamRole"
+        },
+        {
+          "command": "IamTreeView.PrintIamRole",
+          "when": "view == IamTreeView && viewItem == IamRole",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.LoadPermissions",
+          "when": "view == IamTreeView && viewItem == PermissionsGroup",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.ViewPolicy",
+          "when": "view == IamTreeView && viewItem == Permission",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.DownloadPolicy",
+          "when": "view == IamTreeView && viewItem == Permission",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.LoadTrustRelationships",
+          "when": "view == IamTreeView && viewItem == TrustRelationshipsGroup",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.ViewTrustRelationship",
+          "when": "view == IamTreeView && viewItem == TrustRelationship",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.DownloadTrustRelationship",
+          "when": "view == IamTreeView && viewItem == TrustRelationship",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.LoadTags",
+          "when": "view == IamTreeView && viewItem == TagsGroup",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.AddTag",
+          "when": "view == IamTreeView && viewItem == TagsGroup",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.UpdateTag",
+          "when": "view == IamTreeView && viewItem == Tag",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.RemoveTag",
+          "when": "view == IamTreeView && viewItem == Tag",
+          "group": "inline"
+        },
+        {
+          "command": "IamTreeView.LoadInfo",
+          "when": "view == IamTreeView && viewItem == InfoGroup",
+          "group": "inline"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aws-iam-vscode-extension",
+          "title": "AWS IAM",
+          "icon": "media/aws-iam-logo-activitybar.png"
+        }
+      ]
+    },
+    "views": {
+      "aws-iam-vscode-extension": [
+        {
+          "id": "IamTreeView",
+          "name": "AWS IAM Roles",
+          "icon": "media/aws-iam-logo-activitybar.png"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "IamTreeView",
+        "contents": "Please click [+] to add IAM Roles. \n [Add IAM Role](command:IamTreeView.AddIamRole) \n Leave role name empty to get all your roles. You can enter role name partially. \n If you can not connect after a while check your Aws Credentials, Network and Proxy settings. \n\n\n\n To Access Aws, you need to configure aws credentials. \n For more detail on Aws Credentials [Click Here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) \n For a Youtube Tutorial [Click Here](https://www.youtube.com/watch?v=SON8sY1iOBU) \n [Update Aws EndPoint](command:IamTreeView.UpdateAwsEndPoint)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/archiver": "^7.0.0",
+    "@types/node": "^18.11.3",
+    "@types/vscode": "^1.104.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.18.0",
+    "glob": "^11.0.1",
+    "mocha": "^11.1.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-iam": "^3.936.0",
+    "@aws-sdk/client-sts": "^3.936.0",
+    "@aws-sdk/credential-providers": "^3.936.0",
+    "@vscode-elements/elements": "^2.3.1",
+    "@vscode/codicons": "^0.0.43",
+    "archiver": "^7.0.1"
+  }
+}
