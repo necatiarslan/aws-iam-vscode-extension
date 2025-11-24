@@ -1,17 +1,13 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { fromNodeProviderChain } from "@aws-sdk/credential-providers";
-import { fromIni } from "@aws-sdk/credential-provider-ini";
 import { IAMClient } from "@aws-sdk/client-iam";
 import * as ui from "./UI";
 import { MethodResult } from './MethodResult';
 import { homedir } from "os";
-import { sep } from "path";
-import { join, basename, extname, dirname } from "path";
+import { join, sep} from "path";
 import { parseKnownFiles, SourceProfileInit } from "../aws-sdk/parseKnownFiles";
 import { ParsedIniData } from "@aws-sdk/types";
 import * as IamTreeView from '../iam/IamTreeView';
-import * as fs from 'fs';
-import * as archiver from 'archiver';
 
 export async function GetCredentials() {
   let credentials;

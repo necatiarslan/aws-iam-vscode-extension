@@ -3,7 +3,7 @@
   "displayName": "AWS IAM",
   "description": "Manage & Monitor your AWS IAM Roles",
   "version": "1.0.0",
-  "publisher": "NecatiARSLAN",
+  "publisher": "Necati ARSLAN",
   "repository": {
     "type": "git",
     "url": "https://github.com/necatiarslan/aws-iam-vscode-extension"
@@ -18,7 +18,14 @@
   "keywords": [
     "AWS",
     "IAM",
-    "Roles"
+    "Roles",
+    "AWS IAM",
+    "AWS IAM Roles",
+    "AWS IAM Management",
+    "AWS IAM Monitoring",
+    "AWS IAM Roles Management",
+    "AWS IAM Roles Monitoring",
+    "AWS IAM Roles Management & Monitoring"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
