@@ -1,7 +1,7 @@
-# AWS IAM Extension for VSCode
+# Aws Iam Extension for VSCode
 ![screenshot](media/ext-main.png)
 
-🚀 **AWS IAM Extension for VSCode** allows you to interact with your AWS IAM Roles directly within VSCode. This extension streamlines the management and monitoring of IAM roles, providing an intuitive interface for managing permissions, trust relationships, tags, and viewing role information—all within your favorite code editor.
+🚀 **Aws Iam Extension for VSCode** allows you to interact with your Aws Iam Roles directly within VSCode. This extension streamlines the management and monitoring of IAM roles, providing an intuitive interface for managing permissions, trust relationships, tags, and viewing role information—all within your favorite code editor.
 
 ## ✨ Features
 
@@ -40,7 +40,7 @@ View detailed IAM role configuration in a convenient tree structure:
 
 ## 🎬 Quick Start
 
-1. **Install the Extension**: Search for "AWS IAM" in VSCode Extensions
+1. **Install the Extension**: Search for "Aws Iam" in VSCode Extensions
 2. **Configure AWS Credentials**: Set up your AWS credentials (see below)
 3. **Add IAM Role**: Click the `+` icon in the IAM tree view
 4. **Start Managing**: View permissions, trust relationships, add tags, and more!
@@ -112,7 +112,7 @@ The extension searches for AWS credentials in the following order:
    - If you've configured SSO using the AWS CLI
 
 6. **Web Identity Token**:
-   - For federated identity access, such as AWS IAM roles for Kubernetes (EKS)
+   - For federated identity access, such as Aws Iam roles for Kubernetes (EKS)
 
 ## 🐛 Bug Report & Feature Requests
 To report bugs or request new features:

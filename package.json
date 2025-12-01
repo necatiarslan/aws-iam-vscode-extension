@@ -1,8 +1,8 @@
 {
   "name": "aws-iam-vscode-extension",
-  "displayName": "AWS IAM",
-  "description": "Manage & Monitor your AWS IAM Roles",
-  "version": "1.0.0",
+  "displayName": "Aws Iam",
+  "description": "Manage & Monitor Your Aws Iam Roles",
+  "version": "1.0.1",
   "publisher": "NecatiARSLAN",
   "repository": {
     "type": "git",
@@ -19,13 +19,13 @@
     "AWS",
     "IAM",
     "Roles",
-    "AWS IAM",
-    "AWS IAM Roles",
-    "AWS IAM Management",
-    "AWS IAM Monitoring",
-    "AWS IAM Roles Management",
-    "AWS IAM Roles Monitoring",
-    "AWS IAM Roles Management & Monitoring"
+    "Aws Iam",
+    "Aws Iam Roles",
+    "Aws Iam Management",
+    "Aws Iam Monitoring",
+    "Aws Iam Roles Management",
+    "Aws Iam Roles Monitoring",
+    "Aws Iam Roles Management & Monitoring"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -312,7 +312,7 @@
       "activitybar": [
         {
           "id": "aws-iam-vscode-extension",
-          "title": "AWS IAM",
+          "title": "Aws Iam",
           "icon": "media/aws-iam-logo-activitybar.png"
         }
       ]
@@ -321,7 +321,7 @@
       "aws-iam-vscode-extension": [
         {
           "id": "IamTreeView",
-          "name": "AWS IAM Roles",
+          "name": "Aws Iam Roles",
           "icon": "media/aws-iam-logo-activitybar.png"
         }
       ]

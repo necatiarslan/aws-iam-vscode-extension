@@ -4,7 +4,7 @@ import { IamTreeView } from './iam/IamTreeView';
 import { IamTreeItem } from './iam/IamTreeItem';
 
 export function activate(context: vscode.ExtensionContext) {
-	ui.logToOutput('AWS IAM Extension activation started');
+	ui.logToOutput('Aws Iam Extension activation started');
 
 	let treeView:IamTreeView = new IamTreeView(context);
 
@@ -120,9 +120,9 @@ export function activate(context: vscode.ExtensionContext) {
 		await treeView.DownloadTrustRelationship(node);
 	});
 
-	ui.logToOutput('AWS IAM Extension activation completed');
+	ui.logToOutput('Aws Iam Extension activation completed');
 }
 
 export function deactivate() {
-	ui.logToOutput('AWS IAM Extension is now de-active!');
+	ui.logToOutput('Aws Iam Extension is now de-active!');
 }

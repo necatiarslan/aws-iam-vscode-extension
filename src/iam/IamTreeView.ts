@@ -68,7 +68,7 @@ export class IamTreeView {
 
 		vscode.window.withProgress({
 			location: vscode.ProgressLocation.Window,
-			title: "AWS IAM: Loading...",
+			title: "Aws Iam: Loading...",
 		}, (progress, token) => {
 			progress.report({ increment: 0 });
 
@@ -177,7 +177,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState AwsEndPoint Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State AwsEndPoint Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State AwsEndPoint Error !!!", error);
 		}
 
 		try {
@@ -187,7 +187,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState AwsProfile Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State AwsProfile Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State AwsProfile Error !!!", error);
 		}
 
 		try {
@@ -197,7 +197,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState FilterString Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State FilterString Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State FilterString Error !!!", error);
 		}
 
 		try {
@@ -207,7 +207,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State Error !!!", error);
 		}
 
 		try {
@@ -217,7 +217,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState isShowHiddenNodes Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State isShowHiddenNodes Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State isShowHiddenNodes Error !!!", error);
 		}
 
 		try {
@@ -227,7 +227,7 @@ export class IamTreeView {
 		catch (error:any) 
 		{
 			ui.logToOutput("IamTreeView.loadState IamRoleList Error !!!", error);
-			ui.showErrorMessage("AWS IAM Load State IamRoleList Error !!!", error);
+			ui.showErrorMessage("Aws Iam Load State IamRoleList Error !!!", error);
 		}
 
 	}
