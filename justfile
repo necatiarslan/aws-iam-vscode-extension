@@ -28,10 +28,10 @@ npm-install:
     npm install
     npx tsc --noEmit
 
-list-iam-roles:
+list:
     aws --endpoint-url=http://localhost:4566 iam list-roles 
 
-add-iam-role:
+add:
     aws --endpoint-url=http://localhost:4566 iam create-role \
     --role-name my-role \
     --assume-role-policy-document file://test/iam-role-policy.json \
